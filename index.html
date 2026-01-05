@@ -42,13 +42,28 @@
             line-height: 1.6;
             background-color: #ffffff;
             color: #111;
-            overflow: Hidden;
+            overflow: hidden;
         }
 
         .content-container {
             width: 100%;
             max-width: 600px;
             text-align: left;
+        }
+
+        .image-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 2em;
+        }
+
+        .hero-image {
+            width: 100%;
+            max-width: 280px;
+            height: auto;
+            display: block;
+            object-fit: contain;
         }
 
         h1 {
@@ -85,6 +100,12 @@
             pointer-events: none;
             z-index: 10;
         }
+
+        @media (max-width: 480px) {
+            .hero-image {
+                max-width: 200px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -93,6 +114,9 @@
         <h1>YEEZY.LLC</h1>
         <p>The new YZY WIKI is under construction.</p>
         <p>Email <a href="mailto:get@yeezy.llc">get@yeezy.llc</a> with (address)@yeezy.llc to get a <a href="https://developers.cloudflare.com/email-routing/" target="_blank" rel="noopener noreferrer">forward address</a>.</p>
+        <div class="image-container">
+            <img src="./public/yzyglobe.png" alt="YEEZY" class="hero-image">
+        </div>
     </main>
 
     <span class="corner-text">We are not affiliated with Yeezy LLC. Please don't sue us.</span>
